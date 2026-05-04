@@ -1,8 +1,8 @@
 public class No {
 
     Integer conteudo;
-     No esquerda;
-     No direita;
+    No esquerda;
+    No direita;
 
     public No(Integer conteudo) {
         this.conteudo = conteudo;
