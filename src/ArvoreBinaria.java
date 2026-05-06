@@ -32,7 +32,31 @@ public class ArvoreBinaria {
         }
     }
 
-
+    private void inserirIterativo(No no){
+        if(estaVazia()){
+            this.raiz= no;
+            return;
+        } else {
+            No aux = this.raiz;
+            while(aux != null){
+                if(no.getConteudo() > aux.getConteudo()){
+                    if(no.getConteudo() == null){
+                        aux.setDireita(no);
+                        return;
+                    } else {
+                        aux = aux.getDireita();
+                    }
+                } else {
+                    if (aux.getEsquerda() == null) {
+                        aux = aux.getEsquerda();
+                        return;
+                    } else {
+                        aux = aux.getEsquerda();
+                    }
+                }
+            }
+        }
+    }
 
     public  boolean estaVazia(){
         if(this.raiz.getConteudo() == null){
