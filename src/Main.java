@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        ArvoreBinariaRecursiva arvore = new ArvoreBinariaRecursiva(); // criando arvore
+        ArvoreBinaria arvore = new ArvoreBinaria(); // criando arvore
 
         arvore.inserir(1); //raiz
 

@@ -1,7 +1,7 @@
-public class ArvoreBinariaRecursiva {
+public class ArvoreBinaria {
     No raiz;
 
-    public ArvoreBinariaRecursiva() {
+    public ArvoreBinaria() {
         this.raiz = new No(null);
     }
 
@@ -31,6 +31,17 @@ public class ArvoreBinariaRecursiva {
             }
         }
     }
+
+
+
+    public  boolean estaVazia(){
+        if(this.raiz.getConteudo() == null){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public void exibir (String percurso){
         switch(percurso){
             case("pre"):
@@ -41,6 +52,7 @@ public class ArvoreBinariaRecursiva {
                 break;
             case("pos"):
                 posOrdem(this.raiz);
+                break;
         }
     }
 
@@ -48,8 +60,8 @@ public class ArvoreBinariaRecursiva {
         if (no.getEsquerda() == null){
             return;
         }
-        preOrdem(no.getEsquerda());
         System.out.println(no.getEsquerda());
+        preOrdem(no.getEsquerda());
         preOrdem(no.getDireita());
     }
 
@@ -58,16 +70,16 @@ public class ArvoreBinariaRecursiva {
             return;
         }
         emOrdem(no.getEsquerda());
-        emOrdem(no.getDireita());
         System.out.println(no.getEsquerda());
+        emOrdem(no.getDireita());
     }
 
     public void posOrdem(No no){
         if (no.getEsquerda() == null){
             return;
         }
-        System.out.println(no.getEsquerda());
         posOrdem(no.getEsquerda());
         posOrdem(no.getDireita());
+        System.out.println(no.getEsquerda());
     }
 }
